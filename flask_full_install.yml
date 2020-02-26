@@ -1,0 +1,6 @@
+---
+- hosts: "all"
+  remote_user: root
+  tasks:
+  - include_vars:  "/var/lib/awx/projects/ansible_rpi_library/group_vars/DEV/all"
+  - include:  "{{ flask_location }}/flask_full_install.yml"
